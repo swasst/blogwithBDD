@@ -45,8 +45,13 @@ end
 # gem 'debugger', group: [:development, :test]
 group :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'launchy'
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
